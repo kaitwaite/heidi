@@ -53,7 +53,7 @@ _Resource IDs, endpoints, scripts, and configuration. Update this when anything 
 | [OWNER] (work) | [OWNER WORK EMAIL] | Never contact without explicit per-instance permission |
 | [PARTNER] | [PARTNER EMAIL] | CC for family emails |
 | [FAMILY MEMBER] | [FAMILY EMAIL] | CC for [FAMILY MEMBER]-directed emails |
-| Whitney (Two Sparrows Farm) | [EMAIL REDACTED] | Egg invoice recipient — credits [OWNER]'s account |
+| [FARM CONTACT] ([FARM]) | [FARM CONTACT EMAIL] | Egg invoice recipient — credits [OWNER]'s account |
 
 ---
 
@@ -92,5 +92,5 @@ curl "https://api.open-meteo.com/v1/forecast?latitude=[LAT]&longitude=[LON]&dail
 | Duck eggs | $4.00 / half dozen |
 
 - Log: `eggs/egg_log.md`
-- Invoice recipient: Whitney at [EMAIL REDACTED] (CC [OWNER EMAIL])
+- Invoice recipient: [FARM CONTACT] at [FARM CONTACT EMAIL] (CC [OWNER EMAIL])
 - Always CC [OWNER EMAIL] on invoice emails
