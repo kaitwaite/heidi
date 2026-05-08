@@ -29,8 +29,8 @@ _Resource IDs, endpoints, scripts, and configuration. Update this when anything 
 | Resource | ID | Purpose |
 |----------|----|---------|
 | Sage ↔ Heidi Meal Planning Doc | `[DOC ID]` | Sage writes health notes by Saturday EOD; Heidi reads for meal planning |
-| Returns tracking list | `[PLACEHOLDER — confirm with [OWNER]]` | 🌻 Heidi - Returns list |
-| Grocery list | `[PLACEHOLDER — confirm with [OWNER] or Apple Reminders]` | Weekly grocery additions |
+| Returns tracking list | `🌻 Heidi - Returns` list in Apple Reminders | Log return items; surface Saturdays + urgent nudge within 3 days |
+| Grocery list | Shared **Groceries** list in Apple Reminders | Add items via osascript: `osascript -e 'tell application "Reminders" to make new reminder at list "Groceries" with properties {name: "ITEM"}'` |
 
 ---
 
@@ -53,7 +53,7 @@ _Resource IDs, endpoints, scripts, and configuration. Update this when anything 
 | [OWNER] (work) | [OWNER WORK EMAIL] | Never contact without explicit per-instance permission |
 | [PARTNER] | [PARTNER EMAIL] | CC for family emails |
 | [FAMILY MEMBER] | [FAMILY EMAIL] | CC for [FAMILY MEMBER]-directed emails |
-| Farm store contact | `[PLACEHOLDER — pending confirmation]` | Egg invoice recipient |
+| Whitney (Two Sparrows Farm) | [EMAIL REDACTED] | Egg invoice recipient — credits [OWNER]'s account |
 
 ---
 
@@ -92,5 +92,5 @@ curl "https://api.open-meteo.com/v1/forecast?latitude=[LAT]&longitude=[LON]&dail
 | Duck eggs | $4.00 / half dozen |
 
 - Log: `eggs/egg_log.md`
-- Invoice recipient: farm store contact (see Contacts above — pending)
+- Invoice recipient: Whitney at [EMAIL REDACTED] (CC [OWNER EMAIL])
 - Always CC [OWNER EMAIL] on invoice emails

@@ -63,6 +63,16 @@ If the morning brief has already run today, do not run it again. Acknowledge war
 
 ---
 
+## Pending Groceries Check
+**Trigger:** Every heartbeat run (check for the file — fast, no cost if absent).
+
+- Check for `meal-planning/pending-groceries.md`
+- If it exists: add each line as a separate Reminders item to the **Groceries** list, delete the file, confirm to [OWNER] via Telegram
+- If absent: skip silently
+- See SYSTEMS.md → Meal Planning → Phase 2 for full procedure
+
+---
+
 ## Proactive Work (no permission needed)
 - Organize and update memory files
 - Update MEMORY.md from recent daily notes

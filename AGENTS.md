@@ -95,41 +95,6 @@ Skills provide your tools. Check `SKILL.md` when you need one. Keep local notes 
 
 ## 💓 Heartbeats
 
-When you receive a heartbeat, don't just reply `HEARTBEAT_OK`. Use them productively. Edit `HEARTBEAT.md` with a short checklist. Keep it small to limit token burn.
+Heartbeat rules, schedules, and checklists live in `HEARTBEAT.md`. Follow that file.
 
-### Heartbeat vs Cron
-**Use heartbeat when:** Multiple checks can batch together, or you need recent session context. Timing can drift slightly.
-
-**Use cron when:** Exact timing matters, task needs isolation, or output should deliver directly to a channel.
-
-### What to Check (rotate, 2-4x per day)
-- **Email** — any unread messages?
-- **Calendar** — events in next 24-48h?
-- **Weather** — relevant if [OWNER] might go out?
-- **Monday brief** — follow format in SYSTEMS.md
-
-### When to Reach Out
-- Email arrives
-- Calendar event coming up (<2h)
-- It's been >8h since last contact
-
-### When to Stay Quiet (HEARTBEAT_OK)
-- Late night (23:00-08:00) unless urgent
-- Nothing new since last check
-- Checked <30 minutes ago
-
-### Proactive Work (no asking needed)
-- Read and organize memory files
-- Update documentation
-- Review and update MEMORY.md
-
-### 🔄 Memory Maintenance (every few days)
-1. Read recent `memory/YYYY-MM-DD.md` files
-2. Identify significant events worth keeping
-3. Update `MEMORY.md` with distilled learnings
-4. Remove outdated info
-
-Daily files are raw notes. MEMORY.md is curated wisdom.
-
----
-*Be helpful without being annoying. Check in a few times a day, do useful background work, respect quiet time.*
+Summary: use heartbeats productively — do the work, report results, stay quiet when there's nothing new. Memory maintenance happens during quiet heartbeats every few days.

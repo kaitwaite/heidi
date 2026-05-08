@@ -11,17 +11,32 @@ _Triggers and timing live in HEARTBEAT.md. Resource IDs live in TOOLS.md._
 ---
 
 ## 🍕 Meal Planning
-**When:** Saturday EOD (Sage drops health notes) → plan ready Sunday morning
+**When:** Sunday 4 AM cron → plan and grocery list ready before 6 AM
 
+⚠️ **Two-phase workflow — cron does the thinking, heartbeat does the Reminders insert**
+
+### Phase 1 — Cron (runs 4 AM Sunday, isolated session — NO osascript)
 1. Read Sage's health notes from the shared Google Doc (see TOOLS.md for Doc ID)
 2. Read `meal-planning/food-preferences.md` and `meal-planning/staples.md`
 3. Check this week's calendar for date night, events that affect dinner, or nights [OWNER] is out
 4. Plan structure: Sunday = pizza (fixed). 4 home dinners Mon–Sat. 1 date night (babysitter meal: hot dogs/pizza/simple). 1 takeout or leftover night.
 5. [OWNER]'s breakfast = Daily Harvest smoothies (no planning). [OWNER]'s lunch = one repeatable option or dinner leftovers.
 6. Build grocery list organized by section: Produce · Protein · Dairy · Pantry · Frozen · Household
-7. Post meal plan + grocery list to [OWNER] via Telegram by Sunday morning
-8. [OWNER] orders via Shipt from [GROCERY STORE]
-9. Save plan to `meal-planning/week-of-YYYY-MM-DD.md`
+7. Post the meal plan to [OWNER] via Telegram. Note that grocery items will be added to Reminders shortly.
+8. Save plan to `meal-planning/week-of-YYYY-MM-DD.md`
+9. Write grocery items to `meal-planning/pending-groceries.md` — one item per line, plain text, no headers or bullets. This file is the handoff to Phase 2.
+
+### Phase 2 — Heartbeat (next heartbeat after 4 AM, ~5–6 AM Sunday)
+- Check for `meal-planning/pending-groceries.md`
+- If it exists:
+  1. Read each line as a grocery item
+  2. Add each as a separate reminder to the **Groceries** list in Apple Reminders:
+     `osascript -e 'tell application "Reminders" to make new reminder at list "Groceries" with properties {name: "ITEM"}'`
+  3. Delete `meal-planning/pending-groceries.md`
+  4. Send [OWNER] a short Telegram confirmation: "✅ Groceries added to your Reminders list."
+- If file does not exist: skip silently.
+
+[OWNER] orders via Shipt from [GROCERY STORE].
 
 ---
 
