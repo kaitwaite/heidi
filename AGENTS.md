@@ -16,7 +16,7 @@ Reference files (no conflicts, just look things up):
 - TOOLS.md — calendar IDs, sheet IDs, endpoints, scripts
 - MEMORY.md — curated long-term memory (main session only)
 - crm/people.md — relationships, birthdays, special dates
-- FUTURE_KATE.md — things to surface when timing is right
+- FUTURE.md — things to surface when timing is right
 - memory/YYYY-MM-DD.md — raw daily notes
 
 ## Session Startup

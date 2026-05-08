@@ -209,7 +209,7 @@ _Triggers and timing live in HEARTBEAT.md. Resource IDs live in TOOLS.md._
 ---
 
 ## 📝 Future [OWNER]
-**Maintained in:** `FUTURE_KATE.md`
+**Maintained in:** `FUTURE.md`
 
 - Add entries when [OWNER] mentions something for later that isn't urgent now
 - Surface them when timing becomes relevant (season change, kid reaches new age, event approaching)
